@@ -15,6 +15,3 @@ files:
 - repo_location: btmidi.service
   file_sys_location: /lib/systemd/system/btmidi.service
   make_exec: false
-- repo_location: testPath.json
-  file_sys_location: ''
-  make_exec: false
