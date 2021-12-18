@@ -1,0 +1,4 @@
+./bootstrap
+./configure --enable-midi --prefix=/usr --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var
+make
+sudo make install

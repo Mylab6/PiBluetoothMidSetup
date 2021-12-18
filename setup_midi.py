@@ -2,12 +2,16 @@ import subprocess
 import json 
 import os 
 
-def run_commands(file_location):
+def run_commands(file_location, sub_dir = None):
     final_path = get_local_file_path( file_location)    
     file1 = open(final_path, 'r')
     Lines = file1.readlines()
     for command in Lines:
-        subprocess.run(command, shell=True, check=True)
+        if(sub_dir):
+            subprocess.run(command, shell=True, check=True,cwd = get_local_file_path(sub_dir))
+
+        else: 
+            subprocess.run(command, shell=True, check=True)
 def copy_file(midi_file):    
     almost_file = os.path.join( 'files_to_copy' ,midi_file['repo_location'])
     file_to_cp = get_local_file_path(almost_file) 
@@ -21,6 +25,7 @@ def get_local_file_path(sub_path):
 
 # first install bluez 
 run_commands("setup_bt_commands.txt")
+run_commands("setup_bluez.txt","bluez")
 files = json.loads("file_locations.json")
 for local_file in files: 
     copy_file(local_file)
