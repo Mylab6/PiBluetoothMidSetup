@@ -2,14 +2,6 @@ import subprocess
 import json 
 import os 
 
-# first install bluez 
-run_commands("setup_bt_commands.txt")
-files = json.loads("file_locations.json")
-for local_file in files: 
-    copy_file(local_file)
-# run various commands 
-run_commands("setup_midi_commands.txt")
-
 def run_commands(file_location):
     final_path = get_local_file_path( file_location)    
     file1 = open(final_path, 'r')
@@ -25,3 +17,12 @@ def copy_file(midi_file):
 def get_local_file_path(sub_path):
     dir_path = os.path.dirname(os.path.realpath(__file__))
     return os.path.join(dir_path,sub_path)
+
+
+# first install bluez 
+run_commands("setup_bt_commands.txt")
+files = json.loads("file_locations.json")
+for local_file in files: 
+    copy_file(local_file)
+# run various commands 
+run_commands("setup_midi_commands.txt")
