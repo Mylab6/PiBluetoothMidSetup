@@ -1,5 +1,20 @@
-Files:
-  ---
+---
 files:
+- repo_location: connect.rb
+  file_sys_location: /usr/local/bin/connectall.rb
+  make_exec: true
+- repo_location: 33-midi-usb.rules
+  file_sys_location: /etc/udev/rules.d/33-midiusb.rules
+  make_exec: false
+- repo_location: midi.service
+  file_sys_location: /lib/systemd/system/midi.service
+  make_exec: false
+- repo_location: 44-bt.rules
+  file_sys_location: /etc/udev/rules.d/44-bt.rules
+  make_exec: false
+- repo_location: btmidi.service
+  file_sys_location: /lib/systemd/system/btmidi.service
+  make_exec: false
 - repo_location: testPath.json
   file_sys_location: ''
+  make_exec: false
