@@ -2,7 +2,8 @@
 
 ## This will change serveral system wide packages/ configurations 
 ## Do not run this on your primary machine or anything you don't know how to recover. 
-Turn a raspberry pi into a Bluetooth Midi device , this assumes your using raspbian
+Turn a Raspberry Pi into a Bluetooth Midi device , this assumes your using raspbian.
+By default you still need to plug in a real usb midi device into the Raspberry PI, however it's very possible to send midi signals from software and transmit them via Bluetooh. While I may add this latter, it's not included with this release.  
 
 
 Takes https://neuma.studio/rpi-midi-complete.html and wrapps it into a nice automated script. 
