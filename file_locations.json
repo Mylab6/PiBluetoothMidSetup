@@ -1,7 +1,7 @@
 {
     "files": [
       {
-        "repo_location": "connect.rb",
+        "repo_location": "connectall.rb",
         "file_sys_location": "/usr/local/bin/connectall.rb",
         "make_exec": true
       },
