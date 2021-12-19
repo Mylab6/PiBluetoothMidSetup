@@ -8,7 +8,7 @@ def get_local_file_path(sub_path):
 
 
 files = json.load( open( get_local_file_path("file_locations.json")))
-for local_file in files: 
+for local_file in files['files']: 
     print(local_file)
     #copy_file(local_file)
 # run various commands 
