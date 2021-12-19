@@ -10,8 +10,10 @@ Takes https://neuma.studio/rpi-midi-complete.html and wrapps it into a nice auto
 Everything is taken care of, except for
 
 sudo apt-get update
-sudo apt-get upgrade
+
+
 sudo apt-get install  git
+
 
 Then run 
 git clone https://github.com/Mylab6/PiBluetoothMidSetup
