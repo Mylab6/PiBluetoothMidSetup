@@ -9,6 +9,9 @@ Takes https://neuma.studio/rpi-midi-complete.html and wrapps it into a nice auto
 I removed the OLED display step, so all you need to get started is a Rasbpery Pi( tested against a PI Zero with a otg cable). 
 In the future I hope to get this working with Maschine controllers as well, but since they don't use a standard Midi connection that's a bit harder.  
 
+
+### This can take anywhere from 20 to 30 minutes.
+
 Run the following commands : 
 
 sudo apt-get update
