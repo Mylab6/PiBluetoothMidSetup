@@ -35,6 +35,10 @@ run_commands("setup_bt_commands.txt")
 # 
 
 run_commands("setup_bluez.txt","bluez")
+
+for local_file in files['files']: 
+    copy_file(local_file)
+
 # Feel free to comment anything out if the install gets stuck after like the first 2 commands. 
 # Setting up bluez takes a minute, make some tea or something .
 
