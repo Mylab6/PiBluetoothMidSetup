@@ -2,6 +2,9 @@ import subprocess
 import json 
 import os 
 
+def get_local_file_path(sub_path):
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    return os.path.join(dir_path,sub_path)
 
 
 files = json.loads( get_local_file_path("file_locations.json"))
