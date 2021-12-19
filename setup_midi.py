@@ -17,8 +17,7 @@ def copy_file(midi_file):
     almost_file = os.path.join( 'files_to_copy' ,midi_file['repo_location'])
     file_to_cp = get_local_file_path(almost_file) 
     shutil.copy( file_to_cp, midi_file['file_sys_location'] )
-    if( midi_file['make_exec']):
-         subprocess.run('sudo chmod +x ' +  midi_file['file_sys_location'])
+
 def get_local_file_path(sub_path):
     dir_path = os.path.dirname(os.path.realpath(__file__))
     return os.path.join(dir_path,sub_path)
