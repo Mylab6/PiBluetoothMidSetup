@@ -24,8 +24,15 @@ def get_local_file_path(sub_path):
 
 
 # first install bluez 
+
 run_commands("setup_bt_commands.txt")
+# 
+
 run_commands("setup_bluez.txt","bluez")
+# Feel free to comment anything out if the install gets stuck after like the first 2 commands. 
+# Setting up bluez takes a minute, make some tea or something .
+
+# Then copy the files 
 files = json.load( open( get_local_file_path("file_locations.json")))
 #for local_file in files['files']: 
 for local_file in files['files']: 
