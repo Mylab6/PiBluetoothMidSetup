@@ -16,6 +16,10 @@ sudo apt-get install  git
 
 
 Then run 
+
 git clone https://github.com/Mylab6/PiBluetoothMidSetup
+
 cd PiBluetoothMidSetup
+
+
 sudo python3 setup_midi.py
