@@ -16,6 +16,8 @@ https://github.com/Mylab6/bluez
 ### Update, PR has been merged in , now using 
 https://github.com/oxesoft/bluez
 
+If you need to change your bluez version see 
+https://github.com/Mylab6/PiBluetoothMidSetup/blob/b9e99cd215e1e6b85c8234ec7b80ac90d62a3005/setup_bt_commands.txt#L8
 Tested against:
 Rasberry Pi OS Lite(32 bit)
 Released 2021-10-30.
