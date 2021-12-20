@@ -5,5 +5,5 @@ sudo dos2unix -k -o  /usr/local/bin/connectall.rb
 sudo apt-get install -y autotools-dev libtool autoconf
 sudo apt-get install -y libasound2-dev
 sudo apt-get install -y libusb-dev libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev
-git clone https://github.com/mylab6/bluez
+git clone https://github.com/oxesoft/bluez
 
