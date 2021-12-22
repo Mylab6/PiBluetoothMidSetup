@@ -52,3 +52,9 @@ cd PiBluetoothMidSetup
 
 
 sudo python3 setup_midi.py
+
+
+###Notes: 
+
+Appears to work with little to no latency. Will not work with a PI Zero/ Pi-Sugar, I suspect it simply isn’t getting enough power.  Tested on both PI Zero and PI Zero 2, this should work on any PI though. 
+
