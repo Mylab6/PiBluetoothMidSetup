@@ -42,7 +42,7 @@ def run_maschine():
 
         
 if __name__ == "__main__":
-    file_exists = exists(binary_location)
+    file_exists = exists( os.path.join( get_local_file_path("maschine.rs"), binary_location)) 
     if not file_exists:
         set_up_maschine()
     run_maschine()
