@@ -12,12 +12,12 @@ def get_hdraw(regex):
 
 def set_up_maschine():
     try:
-        subprocess.run("sudo -u pi curl https://sh.rustup.rs -sSf | bash -s -- -y")
-        subprocess.run("sudo -u pi source $HOME/.cargo/env")
+        subprocess.run("sudo -u pi curl https://sh.rustup.rs -sSf | bash -s -- -y", shell=True)
+        subprocess.run("sudo -u pi source $HOME/.cargo/env", shell=True)
     except:
         pass
     
-    results = subprocess.check_output("sudo -u pi dmesg", universal_newlines=True).split('\n')
+    results = subprocess.check_output("sudo -u pi dmesg", universal_newlines=True, shell=True).split('\n')
     hdraw = ""
     for device in results:
         if "Native Instruments".lower() in device.lower() and "hidraw" in device.lower():
