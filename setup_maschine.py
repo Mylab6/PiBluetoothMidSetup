@@ -27,7 +27,7 @@ def set_up_maschine():
     except:
         pass
     subprocess.run("cargo build --release", shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
-    subprocess.run("cargo run --release /dev/" + hdraw, shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
+    subprocess.run("sudo ./target/release/maschine  /dev/" + hdraw, shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
 
         
 
