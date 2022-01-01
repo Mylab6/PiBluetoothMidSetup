@@ -38,7 +38,7 @@ def find_hidraw():
     return hdraw
 
 def run_maschine():
-    subprocess.run("sudo " + binary_location + "/dev/" + find_hidraw(), shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
+    subprocess.run("sudo " + binary_location + " /dev/" + find_hidraw(), shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
 
         
 if __name__ == "__main__":
