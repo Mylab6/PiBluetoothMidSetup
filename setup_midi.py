@@ -30,17 +30,10 @@ for local_file in files['files']:
 # run various commands 
 
 # first install bluez 
-
-run_commands("setup_bt_commands.txt")
-# 
-
-run_commands("setup_bluez.txt","bluez")
-
-
+if __name__ == "__main__":    
+    run_commands("setup_bt_commands.txt")
+    run_commands("setup_bluez.txt","bluez")
 # Feel free to comment anything out if the install gets stuck after like the first 2 commands. 
 # Setting up bluez takes a minute, make some tea or something .
-
-
-run_commands("setup_midi_commands.txt")
-
-print("Bluetooth midi setup done") 
+    run_commands("setup_midi_commands.txt")
+    print("Bluetooth midi setup done") 

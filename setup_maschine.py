@@ -32,5 +32,6 @@ def set_up_maschine():
     subprocess.run("sudo ./target/release/maschine  /dev/" + hdraw, shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
 
         
-
-set_up_maschine()
+if __name__ == "__main__":
+    
+    set_up_maschine()
