@@ -3,7 +3,7 @@ import json
 import os 
 import shutil
 
-
+import re
 def get_hdraw(regex):
     regexResult = re.search(",.*hidraw.*:",regex)
     return regexResult.group(0).replace(",","").replace(":","")
