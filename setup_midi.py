@@ -22,15 +22,17 @@ def get_local_file_path(sub_path):
     dir_path = os.path.dirname(os.path.realpath(__file__))
     return os.path.join(dir_path,sub_path)
 
+
+if __name__ == "__main__":  
 # Then copy the files 
-files = json.load( open( get_local_file_path("file_locations.json")))
+    files = json.load( open( get_local_file_path("file_locations.json")))
 #for local_file in files['files']: 
-for local_file in files['files']: 
-    copy_file(local_file)
+    for local_file in files['files']: 
+        copy_file(local_file)
 # run various commands 
 
 # first install bluez 
-if __name__ == "__main__":    
+  
     run_commands("setup_bt_commands.txt")
     run_commands("setup_bluez.txt","bluez")
 # Feel free to comment anything out if the install gets stuck after like the first 2 commands. 
