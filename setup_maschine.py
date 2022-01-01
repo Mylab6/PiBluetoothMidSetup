@@ -4,6 +4,8 @@ import os
 import shutil
 
 import re
+
+from setup_midi import get_local_file_path
 def get_hdraw(regex):
     regexResult = re.search(",.*hidraw.*:",regex)
     return regexResult.group(0).replace(",","").replace(":","")
