@@ -12,12 +12,12 @@ def get_hdraw(regex):
 
 def set_up_maschine():
     try:
-        subprocess.run("curl https://sh.rustup.rs -sSf | bash -s -- -y")
-        subprocess.run("source $HOME/.cargo/env")
+        subprocess.run("-u pi curl https://sh.rustup.rs -sSf | bash -s -- -y")
+        subprocess.run("-u pi source $HOME/.cargo/env")
     except:
         pass
     
-    results = subprocess.check_output("dmesg", universal_newlines=True).split('\n')
+    results = subprocess.check_output("-u pi dmesg", universal_newlines=True).split('\n')
     hdraw = ""
     for device in results:
         if "Native Instruments".lower() in device.lower() and "hidraw" in device.lower():
@@ -25,10 +25,10 @@ def set_up_maschine():
             hdraw = get_hdraw(device)
 
     try:
-        subprocess.run("git clone https://github.com/Mylab6/maschine.rs", shell=True, check=True)
+        subprocess.run("-u pi git clone https://github.com/Mylab6/maschine.rs", shell=True, check=True)
     except:
         pass
-    subprocess.run("cargo build --release", shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
+    subprocess.run("-u pi cargo build --release", shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
     subprocess.run("sudo ./target/release/maschine  /dev/" + hdraw, shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
 
         
