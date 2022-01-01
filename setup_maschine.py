@@ -4,7 +4,7 @@ import os
 import shutil
 
 def set_up_maschine():
-    results = subprocess.check_output("dmesg", shell=True, check=True,cwd = get_local_file_path(sub_dir))
+    results = subprocess.check_output("dmesg", shell=True, check=True)
     for device in results:
         if "Native Instruments" in device:
             print(device)
