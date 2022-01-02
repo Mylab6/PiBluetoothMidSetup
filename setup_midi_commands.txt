@@ -6,3 +6,7 @@ sudo service udev restart
 sudo systemctl daemon-reload
 sudo systemctl enable btmidi.service
 sudo systemctl start btmidi.service
+sudo systemctl daemon-reload
+sudo systemctl enable maschine_midi.service
+sudo systemctl start maschine_midi.service
+
