@@ -14,7 +14,7 @@ binary_location = "./target/release/maschine"
 def set_up_maschine():
     try:
         subprocess.run("curl https://sh.rustup.rs -sSf | bash -s -- -y", shell=True)
-        subprocess.run("pi source $HOME/.cargo/env", shell=True)
+        subprocess.run("source $HOME/.cargo/env", shell=True)
     except:
         pass
     
