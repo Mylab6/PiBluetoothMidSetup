@@ -13,11 +13,15 @@ I removed the OLED display step, so all you need to get started is a Rasbperry P
 
 
 Install Rust 
+
+
 curl https://sh.rustup.rs -sSf | bash -s -- -y
 source $HOME/.cargo/env
 
 Clone my fork of maschine.rs which contains a small fix(PR pending)
-git clone https://github.com/Mylab6/maschine.rs", shell=True, check=True)
+
+
+git clone https://github.com/Mylab6/maschine.rs
 
 In maschine.rs folder 
 cargo build --release
