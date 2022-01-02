@@ -1,0 +1,12 @@
+[Unit]
+Description=Midi Maschine
+
+[Service]
+#ExecStart=/usr/local/bin/connectall.rb
+ExecStart=sudo python3 /home/pi/PiBluetoothMidSetup/run_maschine.py
+
+
+[Install]
+WantedBy=multi-user.target
+
+

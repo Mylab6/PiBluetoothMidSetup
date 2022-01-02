@@ -31,9 +31,10 @@ sudo ./target/release/maschine /dev/" + find_hidraw(),
 
 https://github.com/wrl/maschine.rs
 
-### Old 
-The Bluez installed here is a forked version to support Bluetooth Midi, forked again by me to fix a very minor C header issue. I've already submitted a PR, but until it's merged we'll have to use this : 
-https://github.com/Mylab6/bluez
+Note, I've added a bit of functionality to automatically start the Maschine drivers, assuming you've done the above. 
+
+If not the command silently fails, see run_maschine.py
+
 ### Update, PR has been merged in , now using 
 https://github.com/oxesoft/bluez
 
