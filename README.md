@@ -8,12 +8,25 @@ By default you still need to plug in a real usb midi device into the Raspberry P
 
 Takes https://neuma.studio/rpi-midi-complete.html and wraps it into a nice automated script. 
 I removed the OLED display step, so all you need to get started is a Rasbperry Pi( tested against a PI Zero with a otg cable). 
-In the future I hope to get this working with Maschine controllers as well, but since they don't use a standard Midi connection that's a bit harder. 
-### Help requested: Maschine Drivers installation.
 
-If anyone can help me write a script to automate setting up Maschine on Linux I would be very grateful.
+### Maschine instructions 
 
-This project looks perfect , but I'm a bit lost on how to get the correct UDEV ID and permissions.
+
+Install Rust 
+curl https://sh.rustup.rs -sSf | bash -s -- -y
+source $HOME/.cargo/env
+
+Clone my fork of maschine.rs which contains a small fix(PR pending)
+git clone https://github.com/Mylab6/maschine.rs", shell=True, check=True)
+
+In maschine.rs folder 
+cargo build --release
+
+Finally, to run ( see run_maschine.py for an example, use dmesg to get the correct hidraw) 
+
+sudo ./target/release/maschine /dev/" + find_hidraw(),
+
+
 
 
 https://github.com/wrl/maschine.rs
