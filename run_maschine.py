@@ -16,6 +16,7 @@ def find_hidraw():
         if "Native Instruments".lower() in device.lower() and "hidraw" in device.lower():
             print(device)
             hdraw = get_hdraw(device)
+    print("Using HID", hdraw )
     return hdraw
 
 def run_maschine():
