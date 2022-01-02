@@ -1,2 +1,1 @@
 ACTION=="add|remove", SUBSYSTEM=="usb", DRIVER=="usb", RUN+="/usr/local/bin/connectall.rb"
-ACTION=="add|remove", SUBSYSTEM=="usb", DRIVER=="usb", RUN+="sudo python3 /home/pi/PiBluetoothMidSetup/run_maschine.py"
