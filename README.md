@@ -9,35 +9,7 @@ By default you still need to plug in a real usb midi device into the Raspberry P
 Takes https://neuma.studio/rpi-midi-complete.html and wraps it into a nice automated script. 
 I removed the OLED display step, so all you need to get started is a Rasbperry Pi( tested against a PI Zero with a otg cable). 
 
-### Maschine instructions 
 
-
-Install Rust 
-
-
-curl https://sh.rustup.rs -sSf | bash -s -- -y
-source $HOME/.cargo/env
-
-Clone my fork of maschine.rs which contains a small fix(PR pending)
-
-
-git clone https://github.com/Mylab6/maschine.rs
-
-In maschine.rs folder 
-cargo build --release
-
-Finally, to run ( see run_maschine.py for an example, use dmesg to get the correct hidraw) 
-
-sudo ./target/release/maschine /dev/" + find_hidraw(),
-
-
-
-
-https://github.com/wrl/maschine.rs
-
-Note, I've added a bit of functionality to automatically start the Maschine drivers, assuming you've done the above. 
-
-If not the command silently fails, see run_maschine.py
 
 ### Update, PR has been merged in , now using 
 https://github.com/oxesoft/bluez
@@ -71,6 +43,37 @@ cd PiBluetoothMidSetup
 
 sudo python3 setup_midi.py
 
+
+### Maschine instructions 
+
+Should be done AFTER the above, ether run from this projects directory, or 
+change maschine_midi.service , and run_maschine.py for your setup. 
+Install Rust 
+
+
+curl https://sh.rustup.rs -sSf | bash -s -- -y
+source $HOME/.cargo/env
+
+Clone my fork of maschine.rs which contains a small fix(PR pending)
+
+
+git clone https://github.com/Mylab6/maschine.rs
+
+In maschine.rs folder 
+cargo build --release
+
+Finally, to run ( see run_maschine.py for an example, use dmesg to get the correct hidraw) 
+
+sudo ./target/release/maschine /dev/" + find_hidraw(),
+
+
+
+
+https://github.com/wrl/maschine.rs
+
+Note, I've added a bit of functionality to automatically start the Maschine drivers, assuming you've done the above. 
+
+If not the command silently fails, see run_maschine.py
 
 ### Notes: 
 
