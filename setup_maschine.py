@@ -13,18 +13,18 @@ binary_location = "./target/release/maschine"
 
 def set_up_maschine():
     try:
-        subprocess.run("sudo -u pi curl https://sh.rustup.rs -sSf | bash -s -- -y", shell=True)
-        subprocess.run("sudo -u pi source $HOME/.cargo/env", shell=True)
+        subprocess.run("curl https://sh.rustup.rs -sSf | bash -s -- -y", shell=True)
+        subprocess.run("pi source $HOME/.cargo/env", shell=True)
     except:
         pass
     
   
 
     try:
-        subprocess.run("sudo -u pi git clone https://github.com/Mylab6/maschine.rs", shell=True, check=True)
+        subprocess.run("git clone https://github.com/Mylab6/maschine.rs", shell=True, check=True)
     except:
         pass
-    subprocess.run("sudo -u pi cargo build --release", shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
+    subprocess.run("cargo build --release", shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
 
       
 if __name__ == "__main__":
