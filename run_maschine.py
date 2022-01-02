@@ -25,6 +25,9 @@ def run_maschine():
   
 
 if __name__ == "__main__":
+    try:
         run_maschine()
+    except:
+        print("Maschine isn't setup")
 
 
