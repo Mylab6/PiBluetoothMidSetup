@@ -46,6 +46,9 @@ sudo python3 setup_midi.py
 
 ### Maschine instructions 
 
+setup_maschine.py tries to automate this, but it usually fails.
+
+
 Should be done AFTER the above, ether run from this projects directory, or 
 change maschine_midi.service , and run_maschine.py for your setup. 
 Install Rust 
