@@ -24,7 +24,7 @@ def set_up_maschine():
         subprocess.run("git clone https://github.com/Mylab6/maschine.rs", shell=True, check=True)
     except:
         pass
-    subprocess.run("cargo build --release", shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
+    subprocess.run("$HOME/.cargo/bin/cargo build --release", shell=True, check=True, cwd = get_local_file_path("maschine.rs") )
     #old_file_location  = os.path.join( get_local_file_path("maschine.rs"),"maschine_files") 
 
       
